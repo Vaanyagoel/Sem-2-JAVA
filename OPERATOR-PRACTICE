@@ -1,0 +1,28 @@
+class Main {
+    public static void main(String[] args) {
+        
+        int age = 0;
+        int elderCount = 0;
+        int minorCount = 0;
+        Scanner sc = new Scanner(System.in);
+\
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        
+        if (a < 18) {
+            minorCount++;
+        } else if (a >= 18 && a < 60) {
+            System.out.println("You are an adult.");
+        } else if (a >= 60) {
+            elderCount++;
+        }
+        if (!(a < 18 || a >= 60)) {
+            System.out.println("You are an adult.");
+        }
+        if (a > 0 && a < 18) {
+            System.out.println("This is a minor.");
+        }
+        System.out.println("minors: " + minorCount);
+        System.out.println("elders: " + elderCount);
+    }
+}
