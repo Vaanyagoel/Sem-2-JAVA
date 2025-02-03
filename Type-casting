@@ -1,0 +1,16 @@
+class Main {
+    public static void main(String[] args) {
+        int intValue = 100; 
+        double doubleValue = intValue;
+        
+        System.out.println("Int Value: " + intValue);
+        System.out.println("Double Value: " + doubleValue);
+        
+        
+        double doubleValue1 = 9.78; 
+        int intValue1 = (int) doubleValue;
+
+        System.out.println("Double Value1: " + doubleValue1);
+        System.out.println("Int Value1 after casting: " + intValue1);
+    }
+}
