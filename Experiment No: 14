@@ -1,0 +1,12 @@
+import mypackage.ExternalClass;
+import mypackage.InternalClass;
+public class MainClass {
+public static void main(String[] args) {
+
+ExternalClass external = new ExternalClass();
+external.display(); 
+
+InternalClass internal = new InternalClass();
+internal.show();
+}
+}
