@@ -1,0 +1,42 @@
+class MyString {
+private String str;
+
+public MyString(String str) {
+this.str = str;
+}
+
+public boolean equals(MyString other) {
+return this.str.equals(other.str);
+}
+
+public String reverse() {
+return new StringBuilder(str).reverse().toString();
+}
+
+public String changeCase() {
+StringBuilder changedCase = new StringBuilder();
+for (char c : str.toCharArray()) {
+if (Character.isUpperCase(c)) {
+changedCase.append(Character.toLowerCase(c));
+} else {
+changedCase.append(Character.toUpperCase(c));
+}
+}
+return changedCase.toString();
+}
+
+public String getString() {
+return str;
+}}
+public class StringClassDemo {
+public static void main(String[] args) {
+MyString str1 = new MyString("Hello World");
+MyString str2 = new MyString("hello world");
+
+System.out.println("Are the strings equal? " + str1.equals(str2));
+
+System.out.println("Reversed string: " + str1.reverse());
+
+System.out.println("Changed case: " + str1.changeCase());
+}
+}
