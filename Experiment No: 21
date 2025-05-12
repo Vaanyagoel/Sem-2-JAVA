@@ -1,0 +1,22 @@
+import javax.swing.; import java.awt.event.;
+public class DialogBoxExample { public static void main(String[] args) { 
+JFrame frame = new JFrame("Dialog Demo"); frame.setSize(300, 200);
+frame.setLayout(null);
+
+JButton button = new JButton("Button 3");
+button.setBounds(100, 60, 100, 30);
+
+button.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+JOptionPane.showMessageDialog(
+frame,
+"Do you want to quit",
+"Question",
+JOptionPane.QUESTION_MESSAGE
+);
+}
+});
+frame.add(button);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setVisible(true);
+}}
