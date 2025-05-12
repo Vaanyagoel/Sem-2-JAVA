@@ -1,0 +1,36 @@
+import java.awt.*;
+import java.awt.event.*;
+public class AWTMenuExample extends Frame implements ActionListener {
+AWTMenuExample() {
+MenuBar menuBar = new MenuBar();
+Menu drawMenu = new Menu("Draw");
+MenuItem line = new MenuItem("Line");
+MenuItem multiLine = new MenuItem("Multi Line");
+MenuItem rectangle = new MenuItem("Rectangle");
+MenuItem pentagon = new MenuItem("Pentagon");
+MenuItem circle = new MenuItem("Circle");
+drawMenu.add(line);
+drawMenu.add(multiLine);
+drawMenu.add(rectangle);
+drawMenu.add(pentagon);
+drawMenu.add(circle);
+line.addActionListener(this);
+multiLine.addActionListener(this);
+rectangle.addActionListener(this);
+pentagon.addActionListener(this);
+circle.addActionListener(this);
+Menu helpMenu = new Menu("Help");
+menuBar.add(drawMenu);
+menuBar.add(helpMenu);
+setMenuBar(menuBar);
+setTitle("AWT Window Demo");
+setSize(400, 300);
+setLayout(null);
+setVisible(true);
+
+addWindowListener(new WindowAdapter() {
+public void windowClosing(WindowEvent e) {
+dispose();
+}
+});
+}
