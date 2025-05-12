@@ -1,0 +1,7 @@
+import mypackage.Person;
+public class MainClass {
+public static void main(String[] args) {
+Person person = new Person("Alice");
+System.out.println("Person's name: " + person.name);
+}
+}
