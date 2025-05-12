@@ -1,0 +1,27 @@
+import javax.swing.; import java.awt.;
+public class LayoutExample extends JFrame {
+public LayoutExample() {
+setTitle("FlowLayout and BorderLayout Example");
+setSize(400, 300);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+JPanel flowPanel = new JPanel();
+flowPanel.setLayout(new FlowLayout());
+flowPanel.add(new JButton("Button 1"));
+flowPanel.add(new JButton("Button 2"));
+flowPanel.add(new JButton("Button 3"));
+JPanel borderPanel = new JPanel();
+borderPanel.setLayout(new BorderLayout());
+borderPanel.add(new JButton("North"), BorderLayout.NORTH);
+borderPanel.add(new JButton("South"), BorderLayout.SOUTH);
+borderPanel.add(new JButton("East"), BorderLayout.EAST);
+borderPanel.add(new JButton("West"), BorderLayout.WEST);
+borderPanel.add(new JButton("Center"), BorderLayout.CENTER);
+setLayout(new BorderLayout());
+add(flowPanel, BorderLayout.NORTH);
+add(borderPanel, BorderLayout.CENTER);
+}
+public static void main(String[] args) {
+LayoutExample layoutExample = new LayoutExample();
+layoutExample.setVisible(true);
+}
+}
